@@ -417,6 +417,94 @@
             }
 
         }
+
+        /* ===================== */
+        /* RESPONSIVE MOBILE */
+        /* ===================== */
+
+        @media (max-width: 768px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav h2 {
+                font-size: 16px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            /* HERO */
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 120px;
+                gap: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .hero-text h3 {
+                font-size: 18px;
+            }
+
+            .hero-text p {
+                font-size: 14px;
+                margin: 15px auto;
+            }
+
+            .hero-btn {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero-img img {
+                width: 200px;
+                height: 200px;
+            }
+
+            /* ABOUT */
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-info {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            /* SKILLS */
+
+            .skills {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* PORTFOLIO */
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* SERVICES */
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* CONTACT */
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
     </style>
 </head>
 
@@ -715,6 +803,11 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
+        window.addEventListener("resize", () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+        
         let particles = [];
 
         for (let i = 0; i < 60; i++) {
